@@ -1,0 +1,20 @@
+info:
+  contact: {}
+  license: {}
+paths:
+  /api/v1/services:
+    get:
+      parameters:
+      - description: TypeId
+        in: query
+        name: type_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 产品服务页接口

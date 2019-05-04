@@ -1,0 +1,33 @@
+{
+    "info": {
+        "contact": {},
+        "license": {}
+    },
+    "paths": {
+        "/api/v1/services": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "产品服务页接口",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "TypeId",
+                        "name": "type_id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":200,\"data\":{},\"msg\":\"ok\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

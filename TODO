@@ -1,0 +1,26 @@
+
+nginx
+
+技术
+gin + mysql + redis + ant design pro
+
+规范
+restful api
+
+
+ci/cd
+drone + gogs
+
+
+golang 包
+github.com/swaggo/swag v1.4.0
+github.com/gin-gonic/gin v1.3.0
+github.com/jinzhu/gorm v1.9.2
+github.com/braintree/manners v0.4.0
+
+
+
+
+
+
+

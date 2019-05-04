@@ -1,7 +1,12 @@
 package router
 
 import (
-	"gopkg.in/gin-gonic/gin.v1"
+	_ "github.com/official/docs"
+	"github.com/swaggo/gin-swagger"
+	"github.com/swaggo/gin-swagger/swaggerFiles"
+
+	"github.com/gin-gonic/gin"
+	//"github.com/official/handler"
 )
 
 func InitRouter() *gin.Engine {
@@ -13,9 +18,20 @@ func InitRouter() *gin.Engine {
 
 	r.Use(gin.Recovery())
 
+	// r.GET("/services/:id", controller.OneGoods)
+
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+
 	api := r.Group("/api/v1")
-	api.Use(jwt.JWT())
+	api.Use()
 	{
+
+		// Router.POST("/graphql", graphql.GraphqlHandler())
+		// Router.GET("/graphql", graphql.GraphqlHandler())
+		// r.GET("/index", controller.Index)
+		// r.GET("/services", controller.MultiGoods)
+		// api.PUT("/services/:id", controller.Update)
+		// api.DELETE("/services/:id", controller.DeleteGoods)
 
 	}
 

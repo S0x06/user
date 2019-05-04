@@ -1,12 +1,15 @@
 package main
 
 import (
-	"github.com/user/router"
-	"gopkg.in/gin-gonic/gin.v1"
+	"github.com/braintree/manners"
+	"github.com/gin-gonic/gin"
+	"github.com/official/router"
 )
 
 func main() {
 	gin.SetMode("debug")
 	router := router.InitRouter()
-	router.Run(":80")
+
+	manners.ListenAndServe(":8080", router)
+	// router.Run(":8080")
 }
